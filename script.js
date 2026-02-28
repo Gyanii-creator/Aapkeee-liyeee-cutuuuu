@@ -76,3 +76,13 @@ function switchScreen(a,b){
 }
 
 function restart(){ location.reload(); }
+
+/* Secret Double Click Trigger */
+document.addEventListener("dblclick", function () {
+    document.getElementById("secretMessage").classList.remove("hidden");
+});
+
+/* Close Secret */
+function closeSecret(){
+    document.getElementById("secretMessage").classList.add("hidden");
+}
