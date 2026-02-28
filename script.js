@@ -69,16 +69,28 @@ document.addEventListener("mousemove",()=>{
     noBtn.style.top=y+"px";
 });
 
-/* Secret Double Click */
-document.addEventListener("dblclick",()=>{
-    document.getElementById("secretMessage").classList.remove("hidden");
+// Double click to open secret message
+document.body.addEventListener("dblclick", function () {
+  document.getElementById("secretModal").style.display = "flex";
+});
+
+// Close button
+document.getElementById("closeSecret").addEventListener("click", function () {
+  document.getElementById("secretModal").style.display = "none";
+});
+
+// Close if clicked outside box
+window.addEventListener("click", function (e) {
+  const modal = document.getElementById("secretModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
 });
 
 function closeSecret(){
     document.getElementById("secretMessage").classList.add("hidden");
 }
 
-/* Helpers */
 function switchScreen(a,b){
     document.getElementById(a).classList.add("hidden");
     document.getElementById(b).classList.remove("hidden");
