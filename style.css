@@ -115,3 +115,34 @@ input{
     from{transform:scale(0);}
     to{transform:scale(1);}
 }
+
+/* Secret Message Overlay */
+.secret {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    animation: fadeIn .4s ease;
+}
+
+.secretBox {
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:85%;
+    max-width:350px;
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+    animation: pop .5s ease;
+}
+
+.secretBox h2 {
+    color:#ff4d94;
+    margin-bottom:10px;
+}
