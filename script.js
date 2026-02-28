@@ -4,7 +4,7 @@ const music = document.getElementById("bgMusic");
 setTimeout(()=>{
     document.getElementById("loader").style.display="none";
     document.getElementById("app").classList.remove("hidden");
-},1800);
+},1500);
 
 /* Name Check */
 function checkName(){
@@ -19,21 +19,21 @@ function checkName(){
 
 /* Questions */
 const questions=[
-"Aap smile kr rhe ho naaaa abhiiii?",
-"Kesaa laga surpriseeeee?",
-"Aapko ye pasand aayaaa?",
-"Is this cute?",
-"Mai aapkaa suar, gadhaa, chomuu, octopus, and so on.. rahunga naaa?",
+"Are you smiling?",
+"Cutee hai naaa tbh?",
+"Pasand aaya naaa?",
+"U happyyyyyy?",
+"U nowww bohttt happieee?",
 "Do you feel special?",
-"Kya mai aapkoo lifetime annoyy and irritatee kr skta huu?",
+"Can I annoy u and irritateeee you forever?",
 "Did this help your mood?",
 "Are we still a team?",
-"Will you stay hameshaaaaa?",
-"Can we talk bohttt jadaaaa?",
-"kya aapko khushii huiiii?",
+"Will you stay with me foreverrr?",
+"Ham baat kr skte hai bohtt jadaaaa?",
+"Did this surprise you?",
 "Do you know you matter to me a lottt?",
-"Aap mere bohtt jadaa pyaar krte ho naaaa?",
-"Will you keep smiling babyyyy?"
+"Aap merese bohttt pyaar krte ho naaaaa?",
+"Aap smile krte rahoge naaaaa?"
 ];
 
 let index=0;
@@ -45,7 +45,7 @@ function startQuestions(){
 
 function showQuestion(){
     document.getElementById("questionText").innerText=questions[index];
-    document.getElementById("progressBar").style.width=
+    document.getElementById("progressBar").style.width =
         ((index)/questions.length)*100+"%";
 }
 
@@ -59,7 +59,7 @@ function nextQuestion(){
     }
 }
 
-/* Runaway NO Button */
+/* Runaway No Button */
 const noBtn=document.getElementById("noBtn");
 document.addEventListener("mousemove",()=>{
     const x=Math.random()*(window.innerWidth-100);
@@ -69,6 +69,15 @@ document.addEventListener("mousemove",()=>{
     noBtn.style.top=y+"px";
 });
 
+/* Secret Double Click */
+document.addEventListener("dblclick",()=>{
+    document.getElementById("secretMessage").classList.remove("hidden");
+});
+
+function closeSecret(){
+    document.getElementById("secretMessage").classList.add("hidden");
+}
+
 /* Helpers */
 function switchScreen(a,b){
     document.getElementById(a).classList.add("hidden");
@@ -76,13 +85,3 @@ function switchScreen(a,b){
 }
 
 function restart(){ location.reload(); }
-
-/* Secret Double Click Trigger */
-document.addEventListener("dblclick", function () {
-    document.getElementById("secretMessage").classList.remove("hidden");
-});
-
-/* Close Secret */
-function closeSecret(){
-    document.getElementById("secretMessage").classList.add("hidden");
-}
