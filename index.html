@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Aashuuu 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Name Gate -->
+<div class="screen" id="nameScreen">
+    <h1>Only For Someone Special 🌸</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name...">
+    <button onclick="checkName()">Open 💌</button>
+    <p id="error"></p>
+</div>
+
+<!-- Welcome -->
+<div class="screen hidden" id="welcomeScreen">
+    <h1 class="fade">Heloooo Aasheeee cutieeee 🌸</h1>
+    <p class="fade">I made this just to see aapkaaa cutiee sa smileeeeee...</p>
+    <button onclick="startQuestions()">Continue 💖</button>
+</div>
+
+<!-- Questions -->
+<div class="screen hidden" id="questionScreen">
+    <h2 id="questionText"></h2>
+    <div class="buttons">
+        <button onclick="nextQuestion()">Yes 💕</button>
+        <button id="noBtn">No 😢</button>
+    </div>
+</div>
+
+<!-- Final -->
+<div class="screen hidden" id="finalScreen">
+    <h1 class="heartbeat">You Are Truly and Veryy Veryyyyy Special Babyyy 🎀🎀💖</h1>
+
+    <p class="fade">
+        Thank you for being there for meee.<br>
+        Thank you for understanding me.<br>
+        Thank you for staying. ✨🌸
+    </p>
+
+    <h2 class="loveText">I love youuu Aasheeeee 🥹🥹💕💕😘😘💕</h2>
+
+    <button class="replay" onclick="restart()">Replay Again 🌷</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
