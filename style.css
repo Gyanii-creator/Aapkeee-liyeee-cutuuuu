@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(135deg,#ffe6f2,#fff0f7);
+    overflow: hidden;
+}
+
+/* Screens */
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.hidden { display: none; }
+
+/* Input */
+input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff6fa5;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Petal Animation 🌸 */
+body::before {
+    content: "🌸 🌸 🌸 🌸 🌸 🌸 🌸";
+    position: absolute;
+    width: 100%;
+    animation: petals 10s linear infinite;
+    font-size: 24px;
+}
+
+@keyframes petals {
+    from {transform: translateY(-10%);}
+    to {transform: translateY(110%);}
+}
+
+/* Animations */
+.fade { animation: fadeIn 2s ease forwards; }
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+.heartbeat { animation: beat 1s infinite; }
+
+@keyframes beat {
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+
+.loveText {
+    color:#ff3f8e;
+    font-size:28px;
+    animation: pop 1.5s ease forwards;
+}
+
+@keyframes pop {
+    0%{transform:scale(0);opacity:0;}
+    100%{transform:scale(1);opacity:1;}
+}
+
+/* Replay Button */
+.replay {
+    background:#ff9ac4;
+}
+
+/* Mobile Friendly */
+@media (max-width:600px){
+    h1{font-size:22px;}
+    h2{font-size:18px;}
+}
