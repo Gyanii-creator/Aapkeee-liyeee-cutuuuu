@@ -127,3 +127,63 @@ input{
     border-radius:20px;
     text-align:center;
 }
+
+/* Secret Modal Background */
+.secret-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Message Box */
+.secret-box {
+  background: #fff0f6;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  animation: popIn 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.secret-box h2 {
+  color: #ff4d88;
+  margin-bottom: 10px;
+}
+
+.secret-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Close Button */
+#closeSecret {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff4d88;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
