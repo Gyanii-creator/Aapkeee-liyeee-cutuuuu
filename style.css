@@ -1,23 +1,21 @@
-/* Animated Gradient Background */
 body {
     margin:0;
     font-family:'Segoe UI',sans-serif;
-    height:100vh;
     background: linear-gradient(-45deg,#ffd6e7,#ffeaf4,#fce1ff,#ffe3ec);
     background-size:400% 400%;
     animation: gradientMove 12s ease infinite;
     overflow:hidden;
 }
 
+/* Background animation */
 @keyframes gradientMove {
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
-/* Floating Doodles */
 body::after {
-    content:"💖 ✨ 🌸 💕 ⭐ 💗 🌷";
+    content:"💖 ✨ 🌸 💕 ⭐";
     position:absolute;
     width:100%;
     animation: float 18s linear infinite;
@@ -30,7 +28,7 @@ body::after {
     to{transform:translateY(-20vh);}
 }
 
-/* Glass Card */
+/* Card */
 .card {
     backdrop-filter: blur(18px);
     background: rgba(255,255,255,.25);
@@ -42,15 +40,9 @@ body::after {
     margin:auto;
     margin-top:10vh;
     box-shadow:0 8px 30px rgba(0,0,0,.1);
-    animation:fadeUp .8s ease;
 }
 
-.hidden{display:none;}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
+.hidden { display:none; }
 
 /* Buttons */
 button{
@@ -62,18 +54,16 @@ button{
     cursor:pointer;
     transition:.3s;
 }
-button:hover{transform:scale(1.08);}
+button:hover{ transform:scale(1.08); }
 
-/* Input */
 input{
     padding:12px;
     border-radius:20px;
     border:none;
     width:80%;
-    margin:10px 0;
 }
 
-/* Progress Bar */
+/* Progress */
 .progress{
     width:100%;
     height:6px;
@@ -105,9 +95,12 @@ input{
     100%{transform:scale(1);}
 }
 
-/* Final Text */
+/* Final */
+.heartbeat { animation:beat 1s infinite; }
+
 .loveText{
     color:#ff3f8e;
+    font-size:26px;
     animation:pop 1.2s ease;
 }
 
@@ -116,33 +109,21 @@ input{
     to{transform:scale(1);}
 }
 
-/* Secret Message Overlay */
+/* Secret Message */
 .secret {
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.45);
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,.45);
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:999;
-    animation: fadeIn .4s ease;
 }
 
-.secretBox {
+.secretBox{
     background:white;
     padding:30px;
     border-radius:20px;
-    width:85%;
-    max-width:350px;
     text-align:center;
-    box-shadow:0 10px 40px rgba(0,0,0,.2);
-    animation: pop .5s ease;
-}
-
-.secretBox h2 {
-    color:#ff4d94;
-    margin-bottom:10px;
 }
