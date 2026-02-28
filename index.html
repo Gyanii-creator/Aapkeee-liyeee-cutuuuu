@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Meraaa Aashuuu 💖</title>
+<title>For Aashuuu 💖</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,16 +15,17 @@
     <p>Preparing something special...</p>
 </div>
 
+<!-- Music -->
 <audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- Main Container -->
+<!-- Main App -->
 <div id="app" class="hidden">
 
     <!-- Name Gate -->
     <div class="card" id="nameScreen">
-        <h1>Hey… 🌸</h1>
+        <h1>Heyyyy sweetieee… 🌸</h1>
         <p>This is only for one person.</p>
         <input type="text" id="nameInput" placeholder="Enter your name">
         <button onclick="checkName()">Unlock 💌</button>
@@ -33,16 +34,14 @@
 
     <!-- Welcome -->
     <div class="card hidden" id="welcomeScreen">
-        <h1>Heloooo Aashiieeeeeeeeeeebeeaaaaaaa ✨</h1>
-        <p>I made this… just to make you smilewwwwwww.</p>
+        <h1>Hieeee meraaaa cutuuuuuuu ✨</h1>
+        <p>I made this just to see you smile.</p>
         <button onclick="startQuestions()">Start 🌷</button>
     </div>
 
     <!-- Questions -->
     <div class="card hidden" id="questionScreen">
-        <div class="progress">
-            <div id="progressBar"></div>
-        </div>
+        <div class="progress"><div id="progressBar"></div></div>
         <h2 id="questionText"></h2>
         <div class="buttons">
             <button onclick="nextQuestion()">Yes 💕</button>
@@ -60,26 +59,24 @@
         </p>
 
         <h2 class="loveText">I love youuu Aasheeeee 💕</h2>
-
         <button onclick="restart()">Replay 🌸</button>
     </div>
 
 </div>
 
-<script src="script.js"></script>
-    
-    <!-- Secret Hidden Message -->
+<!-- Secret Hidden Message -->
 <div id="secretMessage" class="secret hidden">
     <div class="secretBox">
         <h2>Hey… you found this 🥺</h2>
         <p>
             This part was never meant to be obvious.<br>
             But since you discovered it…<br><br>
-            I just wanted to say,<br>
-            you are really, really important to me. 💗
+            You are really important to me. 💗
         </p>
         <button onclick="closeSecret()">Close 🌸</button>
     </div>
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
